@@ -72,6 +72,10 @@ def Registration():
     db = open("data.txt",'r')
     username = input("Create username/Email: ")
     password = input("Create password: ")
+    password1 = input("Confirm password: ")
+    if (password != password1):
+        print("password does not match")
+        Registration()
     user = []
     pwd = []
     for line in db:
